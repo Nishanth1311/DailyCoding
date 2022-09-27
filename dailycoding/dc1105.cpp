@@ -30,7 +30,7 @@ int main() {
     
     // iterate through the array to form possible subarray sums
     for (int i = 0; i < n; i++) {
-        for (int j = halfsum; j >= arr[i]; j--) {
+        for (int j = halfsum; j > arr[i]; j--) {
             if (possibleSum[j - arr[i]] || (j == arr[i])) {
                 possibleSum[j] = true;
             }
